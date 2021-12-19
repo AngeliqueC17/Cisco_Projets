@@ -1,0 +1,12 @@
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\bin\Debug\netcoreapp3.1\Game_Logic.deps.json
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\bin\Debug\netcoreapp3.1\Game_Logic.dll
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\bin\Debug\netcoreapp3.1\Game_Logic.pdb
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\bin\Debug\netcoreapp3.1\Deck_of_Cards.dll
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\bin\Debug\netcoreapp3.1\Deck_of_Cards.pdb
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.csproj.AssemblyReference.cache
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.AssemblyInfoInputs.cache
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.AssemblyInfo.cs
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.csproj.CoreCompileInputs.cache
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.dll
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.pdb

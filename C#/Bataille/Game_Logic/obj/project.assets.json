@@ -10,6 +10,19 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
+      },
+      "Deck_of_Cards/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Deck_of_Cards.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Deck_of_Cards.dll": {}
+        }
       }
     }
   },
@@ -40,11 +53,16 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
+    },
+    "Deck_of_Cards/1.0.0": {
+      "type": "project",
+      "path": "../Deck_of_Cards/Deck_of_Cards.csproj",
+      "msbuildProject": "../Deck_of_Cards/Deck_of_Cards.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Newtonsoft.Json >= 13.0.1"
+      "Deck_of_Cards >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -73,7 +91,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Gélik\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Deck_of_Cards\\Deck_of_Cards.csproj": {
+              "projectPath": "C:\\Users\\Gélik\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Deck_of_Cards\\Deck_of_Cards.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -85,12 +107,6 @@
     "frameworks": {
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
-        "dependencies": {
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[13.0.1, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

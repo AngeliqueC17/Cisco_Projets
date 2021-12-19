@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UlmC4O2Th2SHiFm47zTxsD3gv757HsCtA6CCtMlf+FxIV1IXKWxyMYt0pWTNmlw6MS2/u+JHey8DY7UIyAX0Ig==",
+  "dgSpecHash": "SeIkfYKXTLSsAfU41wCWNXtCyXfu85OS4gbzPkAbmDr1sVye16cUxd4myAjWlvf4PVEOZ28ucVmK5frSl4zrfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gélik\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Display\\Game_Display.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Gélik\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Gélik\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
     "C:\\Users\\Gélik\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.20\\microsoft.netcore.app.host.win-x64.3.1.20.nupkg.sha512"
   ],
