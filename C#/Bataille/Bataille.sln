@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deck_of_Cards", "Deck_of_Cards\Deck_of_Cards.csproj", "{0712C605-8E8F-4C17-9F05-76A9256D5121}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game_Logic", "Game_Logic\Game_Logic.csproj", "{1D655F17-8D2A-4654-ACCB-E6A8BB4B3322}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game_Display", "Game_Display\Game_Display.csproj", "{6D9E8745-A07D-4E14-87D5-8FFD20D4C9DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game_Unit_Tests", "Game_Unit_Tests\Game_Unit_Tests.csproj", "{7771F572-4243-4488-9A70-2937EA7C0255}"
@@ -18,10 +16,6 @@ Global
 		{0712C605-8E8F-4C17-9F05-76A9256D5121}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0712C605-8E8F-4C17-9F05-76A9256D5121}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0712C605-8E8F-4C17-9F05-76A9256D5121}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1D655F17-8D2A-4654-ACCB-E6A8BB4B3322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D655F17-8D2A-4654-ACCB-E6A8BB4B3322}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1D655F17-8D2A-4654-ACCB-E6A8BB4B3322}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1D655F17-8D2A-4654-ACCB-E6A8BB4B3322}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6D9E8745-A07D-4E14-87D5-8FFD20D4C9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6D9E8745-A07D-4E14-87D5-8FFD20D4C9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D9E8745-A07D-4E14-87D5-8FFD20D4C9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU

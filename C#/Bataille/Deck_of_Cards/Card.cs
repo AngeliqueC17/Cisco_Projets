@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Game_Logic
+namespace Deck_of_Cards
 {
     public class Card
     {
