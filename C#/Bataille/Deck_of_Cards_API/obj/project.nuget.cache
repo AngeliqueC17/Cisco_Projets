@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HRvwuNYPSGWy1vpPuesqNv83VmJHYHiu4D+PkBbCURbEn+1Zjos9D2PPTO7sfv9+IKrhRqG9OPASVCzZYJxdQw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gélik\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Deck_of_Cards_API\\Deck_of_Cards_API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gélik\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Gélik\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.20\\microsoft.netcore.app.host.win-x64.3.1.20.nupkg.sha512"
+  ],
+  "logs": []
+}

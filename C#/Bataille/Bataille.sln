@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deck_of_Cards_API", "Deck_of_Cards_API\Deck_of_Cards_API.csproj", "{452A7031-9EB6-4B46-900B-3AE99076B4DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{452A7031-9EB6-4B46-900B-3AE99076B4DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{452A7031-9EB6-4B46-900B-3AE99076B4DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{452A7031-9EB6-4B46-900B-3AE99076B4DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{452A7031-9EB6-4B46-900B-3AE99076B4DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
