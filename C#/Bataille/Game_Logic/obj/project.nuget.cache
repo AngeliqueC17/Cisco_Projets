@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "OT7S7sDp7r+Ll+AR6AdBF5q/yAS1Tj17oEahmfuUbC3LcVGXu/F8Q6TW+cNa4wjZKee4zCU+ZBTmigF/ZJetAw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gélik\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Logic\\Game_Logic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gélik\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Gélik\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

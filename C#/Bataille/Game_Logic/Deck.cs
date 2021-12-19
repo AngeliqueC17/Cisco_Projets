@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Deck_of_Cards_API
+namespace Game_Logic
 {
     public class Deck
     {
