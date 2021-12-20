@@ -9,7 +9,6 @@ namespace Game_Display
         {
             Console.WriteLine("Bienvenue dans le jeu de la Bataille.");
             
-            Console.WriteLine("Combien de joueurs êtes vous ?");
             Game_Manager.Initialization();
         }
     }

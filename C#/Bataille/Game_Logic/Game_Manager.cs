@@ -11,7 +11,7 @@ namespace Game_Logic
             {
                 Console.WriteLine("Veuillez entrer un nombre entre 2 et 6");
                 nbpl = int.Parse(Console.ReadLine());
-            } while (nbpl > 1 && nbpl < 7);
+            } while (nbpl < 2 || nbpl > 6);
         }
     }
 }
