@@ -24,5 +24,6 @@ namespace Deck_of_Cards
             Shuffled = shuffled;
             Cards = cards;
         }
+
     }
 }

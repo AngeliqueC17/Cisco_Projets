@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SeIkfYKXTLSsAfU41wCWNXtCyXfu85OS4gbzPkAbmDr1sVye16cUxd4myAjWlvf4PVEOZ28ucVmK5frSl4zrfQ==",
+  "dgSpecHash": "h2yicpKmXTvMLTzK/SNPiVulZfWj1qVM66MvchK3sOTKbsYsAYGUdX8+LDPea+EltBVM8pSWlvvfAN2YAs1QIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gélik\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Display\\Game_Display.csproj",
+  "projectFilePath": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Display\\Game_Display.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Gélik\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\Gélik\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\Gélik\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.20\\microsoft.netcore.app.host.win-x64.3.1.20.nupkg.sha512"
+    "C:\\Users\\c21900091\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }
