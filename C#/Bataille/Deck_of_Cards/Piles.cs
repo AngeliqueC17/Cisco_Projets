@@ -4,7 +4,7 @@ namespace Deck_of_Cards
 {
     public class Piles
     {
-        //Maximum de 6 joueurs
+        //Maximum of 6 players
         
         [JsonProperty("player1")]
         public Player Player1 { get; set; }

@@ -16,5 +16,6 @@ namespace Deck_of_Cards
         
         [JsonProperty("cards")]
         public Stack<Card> Cards {get; set;}
+
     }
 }
