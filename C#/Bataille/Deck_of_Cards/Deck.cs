@@ -16,13 +16,5 @@ namespace Deck_of_Cards
         
         [JsonProperty("cards")]
         public Stack<Card> Cards {get; set;}
-        
-        public Deck(string id, int remaining, bool shuffled, Stack<Card> cards)
-        {
-            ID = id;
-            Remaining = remaining;
-            Shuffled = shuffled;
-            Cards = cards;
-        }
     }
 }

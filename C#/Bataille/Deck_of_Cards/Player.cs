@@ -10,11 +10,5 @@ namespace Deck_of_Cards
         
         [JsonProperty("cards")]
         public Stack<Card> Cards {get; set;}
-        
-        public Player(int remaining, Stack<Card> cards)
-        {
-            Remaining = remaining;
-            Cards = cards;
-        }
     }
 }

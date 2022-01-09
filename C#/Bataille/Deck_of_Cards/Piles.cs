@@ -26,16 +26,6 @@ namespace Deck_of_Cards
         
         [JsonProperty("discard")]
         public int Discard { get; set; }
-        
-        public Piles(Player player1, Player player2, Player player3, Player player4, Player player5, Player player6, int discard)
-        {
-            Player1 = player1;
-            Player2 = player2;
-            Player3 = player3;
-            Player4 = player4;
-            Player5 = player5;
-            Player6 = player6;
-            Discard = discard;
-        }
+
     }
 }

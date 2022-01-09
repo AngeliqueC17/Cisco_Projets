@@ -10,3 +10,4 @@ C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\
 C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.csproj.CoreCompileInputs.cache
 C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.dll
 C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.pdb
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.csproj.CopyComplete

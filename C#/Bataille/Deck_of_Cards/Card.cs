@@ -13,11 +13,5 @@ namespace Deck_of_Cards
         [JsonProperty("suit")]
         public string Suit { get; set; }
 
-        public Card(string code, string value, string suit)
-        {
-            Code = code;
-            Value = value;
-            Suit = suit;
-        }
     }
 }

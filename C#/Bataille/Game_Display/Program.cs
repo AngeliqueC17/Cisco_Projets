@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Game_Logic;
 
 namespace Game_Display
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("Welcome to the game.");
-            
             Initialization();
+            await Game_Manager.Initialization();
         }
         
         public static void Initialization() //Initialization of the number of players
