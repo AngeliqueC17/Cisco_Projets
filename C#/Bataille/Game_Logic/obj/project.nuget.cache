@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uoLEkwmHKKW9PatL0aiWUwADdlOqd8ChN9r7amCUoim7veqHKCiC5DgaUlHnswlXaqPHY4v6mSRGZjGraBLi7w==",
+  "dgSpecHash": "YT48hbeRhoyWyioPd0JaacRkwg2FPEikGxxxojYq3gF0vmJnHza/RmRY+uFyy6C8AL0UZWoFdTkcgkn1aAY/Og==",
   "success": true,
-  "projectFilePath": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Logic\\Game_Logic.csproj",
+  "projectFilePath": "C:\\Users\\cassi\\Documents\\LP\\C#\\projet\\C#\\Bataille\\Game_Logic\\Game_Logic.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\c21900091\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\cassi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

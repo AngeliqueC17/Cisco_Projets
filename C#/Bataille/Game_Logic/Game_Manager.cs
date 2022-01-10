@@ -12,6 +12,22 @@ namespace Game_Logic
             Deck deck = await Call.Draw_A_Card(); //Calls the method to implement the deck
         }
 
+        public static void Distribution(int nbpl)
+        {
+            int[] tab = new int[nbpl-1];
+            foreach (int joueur in tab)
+            {
+                //prendre le deck de l'api à la place de la variable int deck
+                int deck = 52;
+                int nbJoueur = nbpl;
+                int nbrCartesJoueur = deck / nbJoueur;
+                tab[joueur] = nbrCartesJoueur; // on met le nombre de carte du joueur 
+                nbJoueur = nbJoueur - 1;
+                deck = deck - nbrCartesJoueur;
+            }
+            
+        }
+
         //Faire une méthode afin de stocker les joueurs dans un tableau
         //Tant qu'il y a des joueurs, les mettres dans un tableau
 

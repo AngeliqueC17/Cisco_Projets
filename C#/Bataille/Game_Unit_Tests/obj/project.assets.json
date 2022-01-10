@@ -1580,6 +1580,47 @@
         "build": {
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "Deck_of_Cards/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Deck_of_Cards.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Deck_of_Cards.dll": {}
+        }
+      },
+      "Game_Display/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Game_Logic": "1.0.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Game_Display.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Game_Display.dll": {}
+        }
+      },
+      "Game_Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Deck_of_Cards": "1.0.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Game_Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Game_Logic.dll": {}
+        }
       }
     }
   },
@@ -5613,10 +5654,28 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Deck_of_Cards/1.0.0": {
+      "type": "project",
+      "path": "../Deck_of_Cards/Deck_of_Cards.csproj",
+      "msbuildProject": "../Deck_of_Cards/Deck_of_Cards.csproj"
+    },
+    "Game_Display/1.0.0": {
+      "type": "project",
+      "path": "../Game_Display/Game_Display.csproj",
+      "msbuildProject": "../Game_Display/Game_Display.csproj"
+    },
+    "Game_Logic/1.0.0": {
+      "type": "project",
+      "path": "../Game_Logic/Game_Logic.csproj",
+      "msbuildProject": "../Game_Logic/Game_Logic.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Deck_of_Cards >= 1.0.0",
+      "Game_Display >= 1.0.0",
+      "Game_Logic >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
       "Newtonsoft.Json >= 13.0.1",
       "coverlet.collector >= 3.0.2",
@@ -5625,19 +5684,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\c21900091\\.nuget\\packages\\": {}
+    "C:\\Users\\cassi\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj",
+      "projectUniqueName": "C:\\Users\\cassi\\Documents\\LP\\C#\\projet\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj",
       "projectName": "Game_Unit_Tests",
-      "projectPath": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj",
-      "packagesPath": "C:\\Users\\c21900091\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\obj\\",
+      "projectPath": "C:\\Users\\cassi\\Documents\\LP\\C#\\projet\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj",
+      "packagesPath": "C:\\Users\\cassi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cassi\\Documents\\LP\\C#\\projet\\C#\\Bataille\\Game_Unit_Tests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\c21900091\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cassi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5650,7 +5714,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\cassi\\Documents\\LP\\C#\\projet\\C#\\Bataille\\Deck_of_Cards\\Deck_of_Cards.csproj": {
+              "projectPath": "C:\\Users\\cassi\\Documents\\LP\\C#\\projet\\C#\\Bataille\\Deck_of_Cards\\Deck_of_Cards.csproj"
+            },
+            "C:\\Users\\cassi\\Documents\\LP\\C#\\projet\\C#\\Bataille\\Game_Display\\Game_Display.csproj": {
+              "projectPath": "C:\\Users\\cassi\\Documents\\LP\\C#\\projet\\C#\\Bataille\\Game_Display\\Game_Display.csproj"
+            },
+            "C:\\Users\\cassi\\Documents\\LP\\C#\\projet\\C#\\Bataille\\Game_Logic\\Game_Logic.csproj": {
+              "projectPath": "C:\\Users\\cassi\\Documents\\LP\\C#\\projet\\C#\\Bataille\\Game_Logic\\Game_Logic.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5703,7 +5777,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

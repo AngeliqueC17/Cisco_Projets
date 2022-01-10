@@ -20,4 +20,10 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Deck_of_Cards\Deck_of_Cards.csproj" />
+      <ProjectReference Include="..\Game_Display\Game_Display.csproj" />
+      <ProjectReference Include="..\Game_Logic\Game_Logic.csproj" />
+    </ItemGroup>
+
 </Project>

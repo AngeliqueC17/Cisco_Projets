@@ -12,8 +12,7 @@ namespace Game_Display
             Initialization(); //Calls the method to initialize the number of players
             await Game_Manager.Initialization(); //Calls the method to implement the deck
         }
-        
-        public static void Initialization() //Initialization of the number of players
+        public static int Initialization() //Initialization of the number of players
         {
             int nbpl; //Number of players, min 2 and max 6
             do
@@ -21,8 +20,14 @@ namespace Game_Display
                 Console.WriteLine("Please, enter a number between 2 and 6");
                 nbpl = int.Parse(Console.ReadLine());
             } while (nbpl < 2 || nbpl > 6);
-            
+
             Console.WriteLine("OK ! The game will be played between " + nbpl + " players");
+
+            // distribution of the cards between the players in the Game_Logic > Game_Manager.cs
+            Game_Manager.Distribution(nbpl);
+
+            return nbpl;
         }
+
     }
 }
