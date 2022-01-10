@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gélik\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj": {}
+    "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gélik\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj": {
+    "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gélik\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj",
+        "projectUniqueName": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj",
         "projectName": "Game_Unit_Tests",
-        "projectPath": "C:\\Users\\Gélik\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj",
-        "packagesPath": "C:\\Users\\Gélik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gélik\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\obj\\",
+        "projectPath": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj",
+        "packagesPath": "C:\\Users\\c21900091\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gélik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\c21900091\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,18 +75,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
