@@ -9,8 +9,8 @@ namespace Game_Display
         static async Task Main(string[] args)
         {
             Console.WriteLine("Welcome to the game.");
-            Initialization(); //Calls the method to initialize the number of players
-            await Game_Manager.Initialization(); //Calls the method to implement the deck
+            int nbpl = Initialization(); //Calls the method to initialize the number of players
+            Game_Manager.Initialization(nbpl); //Calls the method to implement the deck
         }
         public static int Initialization() //Initialization of the number of players
         {

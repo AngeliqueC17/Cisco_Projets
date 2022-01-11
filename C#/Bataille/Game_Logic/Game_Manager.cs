@@ -1,32 +1,80 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Deck_of_Cards;
+using Newtonsoft.Json;
 
 namespace Game_Logic
 {
     public class Game_Manager
 
     {
-        public static async Task Initialization()
+        public Deck Jeu;
+        public Call MonAPI;
+
+        public Game_Manager()
         {
-            Deck deck = await Call.Draw_A_Card(); //Calls the method to implement the deck
+            MonAPI = new Call();
+            Jeu = new Deck();
         }
+        public static void Initialization(int nbpl)
+        {
+            Deck deck = Draw_A_Card(); //Calls the method to implement the deck
+            int[] tab = new int[nbpl - 1];
+            foreach (int joueur in tab)
+            {
+                //Deck deck = Initialization();
+                int nbJoueur = nbpl;
+                int nbrCartesJoueur = deck.Remaining / nbJoueur;
+                tab[joueur] = nbrCartesJoueur; // on met le nombre de carte du joueur 
+                nbJoueur = nbJoueur - 1;
+                //  deck = deck.Remaining - nbrCartesJoueur;
+
+            }
+            for (int i = 0; i <= nbpl; i++)
+            {
+
+            }
+
+        }
+        /* public List<Card> Draw(int howMany)
+         {
+             List<Card> userHand = new List<Card>();
+
+             for (int i = 0; i < howMany; i++)
+             {
+                 int index = RandomNumber(0, CardSet.Count);
+
+                 userHand.Add(new Card((int)CardSet[index].CardSuit, (int)CardSet[index].CardValue));
+                 CardSet.RemoveAt(index);
+             }
+
+             return userHand;
+         }*/
 
         public static void Distribution(int nbpl)
         {
-            int[] tab = new int[nbpl-1];
-            foreach (int joueur in tab)
+            //Uri Url = new Uri("https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/add/?cards=AS,2S");
+            for (int i = 0; i <= nbpl; i++)
             {
-                //prendre le deck de l'api à la place de la variable int deck
-                int deck = 52;
-                int nbJoueur = nbpl;
-                int nbrCartesJoueur = deck / nbJoueur;
-                tab[joueur] = nbrCartesJoueur; // on met le nombre de carte du joueur 
-                nbJoueur = nbJoueur - 1;
-                deck = deck - nbrCartesJoueur;
+               // string Urle = "https://deckofcardsapi.com/api/deck/" + Deck. + "/pile/player" + i + "/add/?cards=AS,2S";
+                Uri Url = new Uri("https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/player/add/?cards=AS,2S");
             }
-            
+
         }
+
+
+        public static Deck Draw_A_Card()
+        {
+            string Urle = "https://deckofcardsapi.com/api/deck/new/draw/?count=52"; 
+            Uri Url = new Uri(Urle);                                                                          
+            Task<string> MonJeu = Call.FonctionGet(Url);
+            string contentResponse = MonJeu.Result;//This choice is explained in order to be able to have a deck made up of 52 cards that can be displayed
+            Deck deck = JsonConvert.DeserializeObject<Deck>(contentResponse); //Converts the recovered JSON into objects, here a deck with cards
+            return deck; //Return the deck with an ID, the count of remaining, the cards and the deck shuffled
+        }
+
 
         //Faire une méthode afin de stocker les joueurs dans un tableau
         //Tant qu'il y a des joueurs, les mettres dans un tableau

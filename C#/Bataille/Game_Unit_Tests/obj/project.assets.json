@@ -5684,19 +5684,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\c21900091\\.nuget\\packages\\": {}
+    "C:\\Users\\cassi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj",
+      "projectUniqueName": "C:\\Users\\cassi\\Documents\\LP\\c#\\projet final\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj",
       "projectName": "Game_Unit_Tests",
-      "projectPath": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj",
-      "packagesPath": "C:\\Users\\c21900091\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\obj\\",
+      "projectPath": "C:\\Users\\cassi\\Documents\\LP\\c#\\projet final\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\Game_Unit_Tests.csproj",
+      "packagesPath": "C:\\Users\\cassi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cassi\\Documents\\LP\\c#\\projet final\\Cisco_Projets\\C#\\Bataille\\Game_Unit_Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\c21900091\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cassi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5710,14 +5710,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Deck_of_Cards\\Deck_of_Cards.csproj": {
-              "projectPath": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Deck_of_Cards\\Deck_of_Cards.csproj"
+            "C:\\Users\\cassi\\Documents\\LP\\c#\\projet final\\Cisco_Projets\\C#\\Bataille\\Deck_of_Cards\\Deck_of_Cards.csproj": {
+              "projectPath": "C:\\Users\\cassi\\Documents\\LP\\c#\\projet final\\Cisco_Projets\\C#\\Bataille\\Deck_of_Cards\\Deck_of_Cards.csproj"
             },
-            "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Display\\Game_Display.csproj": {
-              "projectPath": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Display\\Game_Display.csproj"
+            "C:\\Users\\cassi\\Documents\\LP\\c#\\projet final\\Cisco_Projets\\C#\\Bataille\\Game_Display\\Game_Display.csproj": {
+              "projectPath": "C:\\Users\\cassi\\Documents\\LP\\c#\\projet final\\Cisco_Projets\\C#\\Bataille\\Game_Display\\Game_Display.csproj"
             },
-            "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Logic\\Game_Logic.csproj": {
-              "projectPath": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Game_Logic\\Game_Logic.csproj"
+            "C:\\Users\\cassi\\Documents\\LP\\c#\\projet final\\Cisco_Projets\\C#\\Bataille\\Game_Logic\\Game_Logic.csproj": {
+              "projectPath": "C:\\Users\\cassi\\Documents\\LP\\c#\\projet final\\Cisco_Projets\\C#\\Bataille\\Game_Logic\\Game_Logic.csproj"
             }
           }
         }
@@ -5772,7 +5772,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }
