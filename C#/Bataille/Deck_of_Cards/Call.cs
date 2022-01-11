@@ -23,9 +23,9 @@ namespace Deck_of_Cards
                     response.EnsureSuccessStatusCode();
                     string contentResponse = await response.Content.ReadAsStringAsync();
                     RecupDeck = JsonConvert.DeserializeObject<Deck>(contentResponse); //Converts the recovered JSON into objects, here a deck with cards
-
+                    //the cards are shuffled
                 }
-                catch(HttpRequestException)
+                catch (HttpRequestException)
                 {
                     // Handle error
                 }

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gt1HCCGoIC1qgYTkFEQY/vQjjTAJ/YZ+Y4meq3EZX96XVM9j9zqeMjHoOYi5kFHT2TJyBOJFDT/wiLKkLsP7xw==",
+  "dgSpecHash": "0KVeGz078F2HOQJLfdNRoMgDWApa1lY1U4lOTIlUNdQn1vYF8Mnew5zGwsWVsT6OSNiE8DbbIRR5k1X2//QgiQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cassi\\Documents\\LP\\C#\\projet\\C#\\Bataille\\Deck_of_Cards\\Deck_of_Cards.csproj",
+  "projectFilePath": "C:\\Users\\c21900091\\Documents\\GitHub\\Cisco_Projets\\C#\\Bataille\\Deck_of_Cards\\Deck_of_Cards.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\cassi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\c21900091\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

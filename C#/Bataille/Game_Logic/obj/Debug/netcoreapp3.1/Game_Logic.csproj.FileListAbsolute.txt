@@ -11,3 +11,16 @@ C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\
 C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.dll
 C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.pdb
 C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.csproj.CopyComplete
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\bin\Debug\netcoreapp3.1\Game_Logic.deps.json
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\bin\Debug\netcoreapp3.1\Game_Logic.dll
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\bin\Debug\netcoreapp3.1\Game_Logic.pdb
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\bin\Debug\netcoreapp3.1\Deck_of_Cards.dll
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\bin\Debug\netcoreapp3.1\Deck_of_Cards.pdb
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.csproj.AssemblyReference.cache
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.AssemblyInfoInputs.cache
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.AssemblyInfo.cs
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.csproj.CoreCompileInputs.cache
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.csproj.CopyComplete
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.dll
+C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Logic\obj\Debug\netcoreapp3.1\Game_Logic.pdb
