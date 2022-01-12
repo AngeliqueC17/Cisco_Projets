@@ -23,9 +23,6 @@ namespace Game_Display
 
             Console.WriteLine("OK ! The game will be played between " + nbpl + " players");
 
-            // distribution of the cards between the players in the Game_Logic > Game_Manager.cs
-            Game_Manager.Distribution(nbpl);
-
             return nbpl;
         }
 

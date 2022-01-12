@@ -26,9 +26,6 @@ namespace Deck_of_Cards
                                        //This choice is explained in order to be able to have a deck made up of 52 cards that can be displayed
                 response.EnsureSuccessStatusCode();
                 contentResponse = await response.Content.ReadAsStringAsync();
-                deck = JsonConvert.DeserializeObject<Deck>(contentResponse); //Converts the recovered JSON into objects, here a deck with cards
-
-
 
             return contentResponse; 
         }

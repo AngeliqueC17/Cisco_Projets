@@ -18,7 +18,7 @@ namespace Game_Logic
             MonAPI = new Call();
             Jeu = new Deck();
         }
-        public static void Initialization(int nbpl)
+     /*   public static void Initialization(int nbpl)
         {
             Deck deck = Draw_A_Card(); //Calls the method to implement the deck
             int[] tab = new int[nbpl - 1];
@@ -37,7 +37,7 @@ namespace Game_Logic
 
             }
 
-        }
+        }*/
         /* public List<Card> Draw(int howMany)
          {
              List<Card> userHand = new List<Card>();
@@ -53,25 +53,43 @@ namespace Game_Logic
              return userHand;
          }*/
 
-        public static void Distribution(int nbpl)
+        public static void Distribution(int nbpl, Deck deck)
         {
+            int nbcarddeck = 52;
+            int cardpl = 0;
+            int nbj = nbpl;
             //Uri Url = new Uri("https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/add/?cards=AS,2S");
-            for (int i = 0; i <= nbpl; i++)
+            for (int i = 1; i <= nbpl; i++)
             {
-               // string Urle = "https://deckofcardsapi.com/api/deck/" + Deck. + "/pile/player" + i + "/add/?cards=AS,2S";
-                Uri Url = new Uri("https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/player/add/?cards=AS,2S");
+                cardpl = nbcarddeck / nbj;
+                // string index = Random(nbj, deck.Cards);
+                //deck.Cards;
+                var rand = new Random();
+                List<Card> liste = new List<Card>;
+                for (int j =1; j<=cardpl; j++)
+                {
+                    
+                    //liste.Add(rand.Next(deck.Cards, deck.Cards));
+                }
+               
+                string Urle = "https://deckofcardsapi.com/api/deck/" + deck.ID + "/pile/player" + i + "/add/?cards=" + liste ;
+                Uri Url = new Uri(Urle);
+                Task<string> MonJeu = Call.FonctionGet(Url);
+                string contentResponse = MonJeu.Result;
+                Piles pile = JsonConvert.DeserializeObject<Piles>(contentResponse);
             }
 
         }
 
 
-        public static Deck Draw_A_Card()
+        public static Deck Initialization(int nbpl)
         {
             string Urle = "https://deckofcardsapi.com/api/deck/new/draw/?count=52"; 
             Uri Url = new Uri(Urle);                                                                          
             Task<string> MonJeu = Call.FonctionGet(Url);
             string contentResponse = MonJeu.Result;//This choice is explained in order to be able to have a deck made up of 52 cards that can be displayed
             Deck deck = JsonConvert.DeserializeObject<Deck>(contentResponse); //Converts the recovered JSON into objects, here a deck with cards
+            Distribution(nbpl, deck);
             return deck; //Return the deck with an ID, the count of remaining, the cards and the deck shuffled
         }
 
