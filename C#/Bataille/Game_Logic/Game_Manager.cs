@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Deck_of_Cards;
@@ -38,45 +39,33 @@ namespace Game_Logic
             }
 
         }*/
-        /* public List<Card> Draw(int howMany)
-         {
-             List<Card> userHand = new List<Card>();
-
-             for (int i = 0; i < howMany; i++)
-             {
-                 int index = RandomNumber(0, CardSet.Count);
-
-                 userHand.Add(new Card((int)CardSet[index].CardSuit, (int)CardSet[index].CardValue));
-                 CardSet.RemoveAt(index);
-             }
-
-             return userHand;
-         }*/
 
         public static void Distribution(int nbpl, Deck deck)
         {
             int nbcarddeck = 52;
             int cardpl = 0;
             int nbj = nbpl;
-            //Uri Url = new Uri("https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/add/?cards=AS,2S");
-            for (int i = 1; i <= nbpl; i++)
+            Uri Url; //Url = new Uri("https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/add/?cards=AS,2S"); // base url, without modification
+            string url_in_text = string.Empty;
+            for (int i = 1; i <= nbpl; i++) //for the total number of players, for every player
             {
-                cardpl = nbcarddeck / nbj;
-                // string index = Random(nbj, deck.Cards);
-                //deck.Cards;
-                var rand = new Random();
-                List<Card> liste = new List<Card>;
-                for (int j =1; j<=cardpl; j++)
-                {
-                    
-                    //liste.Add(rand.Next(deck.Cards, deck.Cards));
-                }
-               
-                string Urle = "https://deckofcardsapi.com/api/deck/" + deck.ID + "/pile/player" + i + "/add/?cards=" + liste ;
-                Uri Url = new Uri(Urle);
-                Task<string> MonJeu = Call.FonctionGet(Url);
+                string liste = ""; // create a list wich will contain the cards of the current player
+                cardpl = nbcarddeck / nbj; // initialise the number of cards that the player will have
+                url_in_text = "https://deckofcardsapi.com/api/deck/" + deck.ID + "/draw/?count=" + cardpl; // draw the number cards of the player
+                Url = new Uri(url_in_text);
+                Task<string> MonJeu = Call.FonctionGet(Url); // get json call
                 string contentResponse = MonJeu.Result;
-                Piles pile = JsonConvert.DeserializeObject<Piles>(contentResponse);
+                Deck pile = JsonConvert.DeserializeObject<Deck>(contentResponse); // convert the pile
+                foreach (string uneCarte in deck.Cards.Select(carte => carte.Code))
+                {
+                    liste += liste + uneCarte + ','; // add to the list the cards of the current player
+                }
+                url_in_text = "https://deckofcardsapi.com/api/deck/" + deck.ID + "/pile/player" + i + "/add/?cards=" + liste; // add to the pile of the player the card
+                Url = new Uri(url_in_text);
+                Task<string> MonJeu2 = Call.FonctionGet(Url);
+                string contentResponse2 = MonJeu.Result;
+                nbj = nbj - 1; // nulber of players - 1 , for the next instruction for, for the calcul
+                nbcarddeck = nbcarddeck - cardpl; // update the total number of cards of the deck
             }
 
         }
