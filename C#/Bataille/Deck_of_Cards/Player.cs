@@ -9,6 +9,6 @@ namespace Deck_of_Cards
         public int Remaining { get; set; }
         
         [JsonProperty("cards")]
-        public Stack<Card> Cards {get; set;}
+        public List<Card> Cards {get; set;}
     }
 }

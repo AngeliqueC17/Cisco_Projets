@@ -6,13 +6,14 @@ namespace Game_Display
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
+            Game_Manager Jeu = new Game_Manager();
             Console.WriteLine("Welcome to the game.");
-            int nbpl = Initialization(); //Calls the method to initialize the number of players
-            Game_Manager.Initialization(nbpl); //Calls the method to implement the deck
+            int nbpl = NombreJoueurs(); //Calls the method to initialize the number of players
+            Game_Manager.Distribution(nbpl, Jeu.Jeu); //Calls the method to implement the deck
         }
-        public static int Initialization() //Initialization of the number of players
+        public static int NombreJoueurs() //Initialization of the number of players
         {
             int nbpl; //Number of players, min 2 and max 6
             do

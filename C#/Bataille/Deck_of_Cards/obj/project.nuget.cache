@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sqf8O3DdudiU+ms4fFMG4Wczu4CLL3cP/LcW2GhoiFk3tl/iSh4CP/tJhRaI5nQKgyJNTRteO+J8NqWrGlih/A==",
+  "dgSpecHash": "Ly/rtGjRVE3WOyywUJ+QNcGi/NtuLqvfKSf67TfBXqsH7FsfFzoE3VrhB3q3xcT5vwK4o51eZHq7u7HR4jp54A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cassi\\Documents\\LP\\c#\\projet final\\Cisco_Projets\\C#\\Bataille\\Deck_of_Cards\\Deck_of_Cards.csproj",
+  "projectFilePath": "C:\\Users\\cassi\\Documents\\LP\\C#\\proj\\proj\\C#\\Bataille\\Deck_of_Cards\\Deck_of_Cards.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cassi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],

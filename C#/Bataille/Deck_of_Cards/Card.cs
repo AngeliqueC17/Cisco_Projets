@@ -4,6 +4,8 @@ namespace Deck_of_Cards
 {
     public class Card
     {
+        public string image { get; set; }
+
         [JsonProperty("code")]
         public string Code { get; set; }
         

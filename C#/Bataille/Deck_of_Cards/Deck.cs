@@ -5,6 +5,8 @@ namespace Deck_of_Cards
 {
     public class Deck
     {
+        public bool success { get; set; }
+
         [JsonProperty("deck_id")]
         public string ID { get; set; }
         
@@ -13,9 +15,11 @@ namespace Deck_of_Cards
         
         [JsonProperty("shuffled")]
         public bool Shuffled { get; set; }
-        
+
+        public Piles piles { get; set; }
+
         [JsonProperty("cards")]
-        public Stack<Card> Cards {get; set;}
+        public List<Card> Cards {get; set;}
 
     }
 }
