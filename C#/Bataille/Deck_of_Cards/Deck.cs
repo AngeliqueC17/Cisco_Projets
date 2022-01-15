@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Deck_of_Cards
 {
     public class Deck
     {
-        public bool success { get; set; }
-
         [JsonProperty("deck_id")]
         public string ID { get; set; }
         
@@ -19,7 +18,6 @@ namespace Deck_of_Cards
         public Piles piles { get; set; }
 
         [JsonProperty("cards")]
-        public List<Card> Cards {get; set;}
-
+        public Stack<Card> Cards {get; set;}
     }
 }

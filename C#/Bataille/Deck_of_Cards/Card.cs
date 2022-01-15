@@ -4,8 +4,6 @@ namespace Deck_of_Cards
 {
     public class Card
     {
-        public string image { get; set; }
-
         [JsonProperty("code")]
         public string Code { get; set; }
         
@@ -14,6 +12,5 @@ namespace Deck_of_Cards
         
         [JsonProperty("suit")]
         public string Suit { get; set; }
-
     }
 }
