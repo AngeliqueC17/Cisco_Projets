@@ -12,33 +12,11 @@ namespace Game_Logic
 
     {
         public Deck Jeu;
-        public Call MonAPI;
 
         public Game_Manager()
         {
-            MonAPI = new Call();
             Jeu = Initialization();
         }
-     /*   public static void Initialization(int nbpl)
-        {
-            Deck deck = Draw_A_Card(); //Calls the method to implement the deck
-            int[] tab = new int[nbpl - 1];
-            foreach (int joueur in tab)
-            {
-                //Deck deck = Initialization();
-                int nbJoueur = nbpl;
-                int nbrCartesJoueur = deck.Remaining / nbJoueur;
-                tab[joueur] = nbrCartesJoueur; // on met le nombre de carte du joueur 
-                nbJoueur = nbJoueur - 1;
-                //  deck = deck.Remaining - nbrCartesJoueur;
-
-            }
-            for (int i = 0; i <= nbpl; i++)
-            {
-
-            }
-
-        }*/
 
         public static void Distribution(int nbpl, Deck deck)
         {
@@ -84,14 +62,27 @@ namespace Game_Logic
         }
 
 
-        //Faire une méthode afin de stocker les joueurs dans un tableau
-        //Tant qu'il y a des joueurs, les mettres dans un tableau
+        /*   public static void Initialization(int nbpl)
+           {
+               Deck deck = Draw_A_Card(); //Calls the method to implement the deck
+               int[] tab = new int[nbpl - 1];
+               foreach (int joueur in tab)
+               {
+                   //Deck deck = Initialization();
+                   int nbJoueur = nbpl;
+                   int nbrCartesJoueur = deck.Remaining / nbJoueur;
+                   tab[joueur] = nbrCartesJoueur; // on met le nombre de carte du joueur 
+                   nbJoueur = nbJoueur - 1;
+                   //  deck = deck.Remaining - nbrCartesJoueur;
+   
+               }
+               for (int i = 0; i <= nbpl; i++)
+               {
+   
+               }
+   
+           }*/
 
-        //Faire une méthode qui permet de distribuer une carte par une carte à chacun des joueurs
-        //deck.card.pop = distribuer une carte
-        //Une carte distribuée à un joueur = +1 dans la pile de carte du joueur
-        //Une carte distribuée à un joueur = -1 dans la pile de carte du deck principal
-        //Il est possible selon le nombre de joueurs que certains aient plus de cartes que d'autres
 
     }
 }

@@ -9,6 +9,13 @@ namespace Deck_of_Cards
         public int Remaining { get; set; }
         
         [JsonProperty("cards")]
-        public List<Card> Cards {get; set;}
+        public Stack<Card> Cards { get; set; }
+
+        public int Numero { get; set; }
+        public Player(int numero)
+        {
+            Numero = numero;
+            Cards = new Stack<Card>();
+        }
     }
 }

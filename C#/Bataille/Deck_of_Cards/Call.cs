@@ -5,29 +5,23 @@ using Newtonsoft.Json;
 
 namespace Deck_of_Cards
 {
-    public class Call
+    public static class Call
     {
-        public static Deck deck;
-        public static HttpClient client;
-
-        public Call()
-        {
-            client = new HttpClient();
-            deck = new Deck();
-        }
-
         public static async Task<string> FonctionGet(Uri Urle)
         {
-            string contentResponse = string.Empty;
-
-                HttpResponseMessage response = await
-                client.GetAsync(Urle); //Get the JSON
-                                       //Put "new" to directly create a deck
-                                       //This choice is explained in order to be able to have a deck made up of 52 cards that can be displayed
+            string contentResponse;
+            using var httpClient = new HttpClient();
+                HttpResponseMessage response = await httpClient.GetAsync(Urle);
                 response.EnsureSuccessStatusCode();
                 contentResponse = await response.Content.ReadAsStringAsync();
 
             return contentResponse; 
+        }
+
+        public static async Task<Deck> RetrieveOneDeck()
+        {
+            return  JsonConvert.DeserializeObject<Deck>(
+                await FonctionGet(new Uri("https://deckofcardsapi.com/api/deck/new/draw/?count=52")));
         }
     }
 }

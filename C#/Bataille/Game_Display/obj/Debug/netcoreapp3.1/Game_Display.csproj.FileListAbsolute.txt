@@ -17,7 +17,6 @@ C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Display\obj\Debu
 C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Display\obj\Debug\netcoreapp3.1\Game_Display.dll
 C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Display\obj\Debug\netcoreapp3.1\Game_Display.pdb
 C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Display\obj\Debug\netcoreapp3.1\Game_Display.genruntimeconfig.cache
-C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Display\obj\Debug\netcoreapp3.1\Game_Display.csproj.CopyComplete
 C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Display\obj\Debug\netcoreapp3.1\Game_Display.csproj.AssemblyReference.cache
 C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Display\obj\Debug\netcoreapp3.1\Game_Display.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\c21900091\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Display\obj\Debug\netcoreapp3.1\Game_Display.AssemblyInfoInputs.cache
@@ -57,3 +56,4 @@ C:\Users\cassi\Documents\LP\C#\proj\proj\C#\Bataille\Game_Display\obj\Debug\netc
 C:\Users\cassi\Documents\LP\C#\proj\proj\C#\Bataille\Game_Display\obj\Debug\netcoreapp3.1\Game_Display.dll
 C:\Users\cassi\Documents\LP\C#\proj\proj\C#\Bataille\Game_Display\obj\Debug\netcoreapp3.1\Game_Display.pdb
 C:\Users\cassi\Documents\LP\C#\proj\proj\C#\Bataille\Game_Display\obj\Debug\netcoreapp3.1\Game_Display.genruntimeconfig.cache
+C:\Users\Gélik\Documents\GitHub\Cisco_Projets\C#\Bataille\Game_Display\obj\Debug\netcoreapp3.1\Game_Display.csproj.CopyComplete
