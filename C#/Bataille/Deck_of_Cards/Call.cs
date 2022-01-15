@@ -7,7 +7,7 @@ namespace Deck_of_Cards
 {
     public static class Call
     {
-        public static async Task<string> FonctionGet(Uri Urle)
+        public static async Task<string> FunctionGet(Uri Urle)
         {
             string contentResponse;
             using var httpClient = new HttpClient();
@@ -21,7 +21,8 @@ namespace Deck_of_Cards
         public static async Task<Deck> RetrieveOneDeck()
         {
             return  JsonConvert.DeserializeObject<Deck>(
-                await FonctionGet(new Uri("https://deckofcardsapi.com/api/deck/new/draw/?count=52")));
+                await FunctionGet(new Uri("https://deckofcardsapi.com/api/deck/new/draw/?count=52")));
+            //Obtenir un jeu de 52 cartes
         }
     }
 }

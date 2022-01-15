@@ -11,10 +11,10 @@ namespace Deck_of_Cards
         [JsonProperty("cards")]
         public Stack<Card> Cards { get; set; }
 
-        public int Numero { get; set; }
-        public Player(int numero)
+        public int Num { get; set; }
+        public Player(int num) //Afin de différencier les joueurs lors de l'affichage
         {
-            Numero = numero;
+            Num = num;
             Cards = new Stack<Card>();
         }
     }

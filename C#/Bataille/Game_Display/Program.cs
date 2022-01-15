@@ -20,17 +20,21 @@ namespace Game_Display
             List<Player> ListPlayers = LaZigounetAMichelle(NombreJoueurs());
             Deck deck = await Call.RetrieveOneDeck();
             Distribution(deck.Cards, ListPlayers);
+            do
+            {
+                Game_ManagerJulien.Manche(ListPlayers);
+            } while (ListPlayers.Count > 1);
 
-            Game_ManagerJulien.Manche(ListPlayers);
+            Console.WriteLine("\n\nLe gagnant est le joueur" + ListPlayers[0].Num);
         }
-        public static int NombreJoueurs() //Initialization of the number of players
+        public static int NombreJoueurs() //Initialiser le nombre des joueurs
         {
-            int nbpl; //Number of players, min 2 and max 6
+            int nbpl; //nbpl = Nombre des joueurs
             do
             {
                 Console.WriteLine("Please, enter a number between 2 and 6");
                 nbpl = int.Parse(Console.ReadLine());
-            } while (nbpl < 2 || nbpl > 6);
+            } while (nbpl < 2 || nbpl > 6); //Minimum 2 joueurs, maximum 6
 
             Console.WriteLine("OK ! The game will be played between " + nbpl + " players");
 

@@ -14,9 +14,7 @@ namespace Deck_of_Cards
         
         [JsonProperty("shuffled")]
         public bool Shuffled { get; set; }
-
-        public Piles piles { get; set; }
-
+        
         [JsonProperty("cards")]
         public Stack<Card> Cards {get; set;}
     }

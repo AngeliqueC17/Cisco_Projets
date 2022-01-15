@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Linq;
 using Deck_of_Cards;
 
@@ -9,13 +8,20 @@ namespace Game_Logic
     public static class Game_ManagerJulien
     {
         private static string[] valeurCarte = new[] {"2", "3","4","5","6","7","8","9","10","JACK","QUEEN","KING","ACE"};
+
+        private static void removePlayers(List<Player> lists)
+        {
+            var joueursPlusCard = lists.Where(p => p.Cards.Count == 0).ToList();
+            joueursPlusCard.ForEach(p=>lists.Remove(p));
+        }
         public static void Manche(List<Player> list)
         {
             List<Card> pile = new List<Card>();
             foreach (var joueur in list)
             {
                 Card carte = joueur.Cards.Pop();
-                Console.WriteLine("Le joueur " + joueur.Numero + " a joué un " + carte.Value);
+                carte.IsReturned = true;
+                Console.WriteLine("Le joueur " + joueur.Num + " a joué un " + carte.Value);
                 pile.Add(carte);
             }
 
@@ -23,12 +29,15 @@ namespace Game_Logic
             
             if (winners.Count == 1)
             {
-                Console.WriteLine("Le gagnant est le joueur " + winners[0].Numero);
+                Console.WriteLine("\nLe gagnant est le joueur " + winners[0].Num + "\n");
                 GetCardsWin(winners[0].Cards, pile);
+                removePlayers(list);
             }
             else
             {
-                Bataille(winners);
+                Player winner = Bataille(winners, list);
+                GetCardsWin(winner.Cards, pile);
+                removePlayers(list);
             }
         }
         public static void GetCardsWin(Stack<Card> PileDuJoueur,  List<Card> cartesGagne)
@@ -62,7 +71,10 @@ namespace Game_Logic
             //On fait correspondre les cartes jouées selon leur rang dans le tableau valeurCarte
             foreach (var carte in cardsPlayed)
             {
-                cardsRanks.Add(Array.FindIndex(valeurCarte, card => card == carte.Value));
+                if (carte.IsReturned)
+                {
+                    cardsRanks.Add(Array.FindIndex(valeurCarte, card => card == carte.Value));
+                }
             }
             
             //On récupère l'indice de la carte la plus forte d'après le tableau valeurCarte
@@ -74,9 +86,53 @@ namespace Game_Logic
             //On retounr le liste des joueurs avec la plus forte carte jouée
             return t.Select(t1 => playersTotal[t1]).ToList();
         }
-        public static void Bataille(List<Player> pq)
+        public static Player Bataille(List<Player> pq, List<Player> TotalDeJoueur)
         {
+            List<Card> pile = new List<Card>();
+            List<Player> winners = new List<Player>();
+            //Les joueurs posent une carte
             
+            do
+            {
+                List<Card> cardsPlayed = new List<Card>();
+                Console.WriteLine("\n\nDébut de la bataille");
+                for (int i = 0; i <= 1; i++)
+                {
+                    var joueursPlusCard = pq.Where(p => p.Cards.Count == 0).ToList();
+                    joueursPlusCard.ForEach(p=>
+                    {
+                        pq.Remove(p);
+                        TotalDeJoueur.Remove(p);
+                    });
+                    foreach (var joueur in pq)
+                    {
+                        if (joueur.Cards.Count == 0 && TotalDeJoueur.Count == 2)
+                        {
+                            Console.WriteLine("Égalité == PAT ");
+                            Environment.Exit(0);
+                        }
+                        Card carte = joueur.Cards.Pop();
+                        //Si i = 0 alors la carte n'est pas retourné et sinon elle est retourné (visible)
+                        carte.IsReturned = (i != 0);
+                        if (carte.IsReturned)
+                        {
+                            Console.WriteLine("Le joueur " + joueur.Num + " a joué un " + carte.Value);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Carte cachée");
+                        }
+                        cardsPlayed.Add(carte);
+                    }
+                }
+                winners = Winners(pq, cardsPlayed);
+                Console.WriteLine("\nFin de la bataille\n");
+                cardsPlayed.ForEach(card => pile.Add(card));
+            } while (winners.Count > 1);
+            
+            Console.WriteLine("Le gagnant de la bataille est le joueur " + winners[0].Num + "\n");
+            GetCardsWin(winners[0].Cards, pile);
+            return winners[0];
         }
     }
 }

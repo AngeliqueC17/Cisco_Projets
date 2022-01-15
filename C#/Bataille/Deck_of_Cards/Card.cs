@@ -13,7 +13,8 @@ namespace Deck_of_Cards
         [JsonProperty("suit")]
         public string Suit { get; set; }
 
-        public override string ToString()
+        public bool IsReturned { get; set; } //Utilisé lors de la bataille pour différencier la carte retournée et la carte cachée
+        public override string ToString() //A retirer
         {
             return "Value : " + Value;
         }
