@@ -24,11 +24,31 @@ namespace Game_Logic
             if (winners.Count == 1)
             {
                 Console.WriteLine("Le gagnant est le joueur " + winners[0].Numero);
+                GetCardsWin(winners[0].Cards, pile);
             }
             else
             {
                 Bataille(winners);
             }
+        }
+        public static void GetCardsWin(Stack<Card> PileDuJoueur,  List<Card> cartesGagne)
+        {
+ 
+            // Temporary stack
+            Stack<Card> temp = new Stack<Card>();
+
+            var test = PileDuJoueur.Reverse().ToList();
+            
+            PileDuJoueur.Clear();
+            
+            //On met les cartes gagné dans temp => en bas de la pile
+            cartesGagne.ForEach(card => temp.Push(card));
+            
+            //On met les cartes tu joueurs dans temp => au dessus des cartes gagnés
+            test.ForEach(card => temp.Push(card));
+            
+            temp.Reverse().ToList().ForEach(card => PileDuJoueur.Push(card));
+
         }
         public static int[] FindAllIndexof<T>(this IEnumerable<T> values, T val)
         {

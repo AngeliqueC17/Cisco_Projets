@@ -12,5 +12,10 @@ namespace Deck_of_Cards
         
         [JsonProperty("suit")]
         public string Suit { get; set; }
+
+        public override string ToString()
+        {
+            return "Value : " + Value;
+        }
     }
 }
