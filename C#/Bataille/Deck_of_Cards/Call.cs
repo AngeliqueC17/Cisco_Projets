@@ -14,15 +14,7 @@ namespace Deck_of_Cards
                 response.EnsureSuccessStatusCode();
                 var contentResponse = await response.Content.ReadAsStringAsync();
 
-            return contentResponse; 
-            
-            /*string contentResponse;
-            using var httpClient = new HttpClient();
-            HttpResponseMessage response = await httpClient.GetAsync(Urle);
-            response.EnsureSuccessStatusCode();
-            contentResponse = await response.Content.ReadAsStringAsync();
-
-            return contentResponse; */
+            return contentResponse;
         }
 
         public static async Task<Deck> RetrieveOneDeck()
