@@ -4,6 +4,8 @@ namespace Deck_of_Cards
 {
     public class Card
     {
+        //Propertie of a card
+        
         [JsonProperty("code")]
         public string Code { get; set; }
         
@@ -13,7 +15,8 @@ namespace Deck_of_Cards
         [JsonProperty("suit")]
         public string Suit { get; set; }
 
-        public bool IsReturned { get; set; } //Utilisé lors de la bataille pour différencier la carte retournée et la carte cachée
+        //Used in a war to differentiate between face up card and face down card
+        public bool IsReturned { get; set; }
         public override string ToString() //A retirer
         {
             return "Value : " + Value;

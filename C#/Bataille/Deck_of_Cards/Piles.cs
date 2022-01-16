@@ -24,6 +24,8 @@ namespace Deck_of_Cards
         [JsonProperty("player6")]
         public Player Player6 { get; set; }
         
+        //For the player to discard a card
+        
         [JsonProperty("discard")]
         public int Discard { get; set; }
 
