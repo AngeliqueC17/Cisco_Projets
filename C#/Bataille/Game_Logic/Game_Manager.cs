@@ -1,88 +1,140 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
 using Deck_of_Cards;
-using Newtonsoft.Json;
 
 namespace Game_Logic
 {
-    public class Game_Manager
-
+    public static class Game_Manager
     {
-        public Deck Jeu;
+        private static string[] cardsValue = new[] {"2","3","4","5","6","7","8","9","10","JACK","QUEEN","KING","ACE"};
 
-        public Game_Manager()
+        private static void RemovePlayers(List<Player> lists)
         {
-            Jeu = Initialization();
+            //Remove the player if he has no more cards
+            
+            var emptyDeck = lists.Where(p => p.Cards.Count == 0).ToList();
+            emptyDeck.ForEach(p=>lists.Remove(p));
         }
-
-        public static void Distribution(int nbpl, Deck deck)
+        public static void Round(List<Player> list)
         {
-            int nbcarddeck = 52;
-            int cardpl = 0;
-            int nbj = nbpl;
-            Uri Url; //Url = new Uri("https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/add/?cards=AS,2S"); // base url, without modification
-            string url_in_text = string.Empty;
-            for (int i = 1; i <= nbpl; i++) //for the total number of players, for every player
+            List<Card> pile = new List<Card>();
+            foreach (var joueur in list)
             {
-                string liste = ""; // create a list wich will contain the cards of the current player
-                cardpl = nbcarddeck / nbj; // initialise the number of cards that the player will have
-                url_in_text = "https://deckofcardsapi.com/api/deck/" + deck.ID + "/draw/?count=" + cardpl;// draw the number cards of the player
-                Url = new Uri(url_in_text);
-                Task<string> MonJeu = Call.FunctionGet(Url);
-                // get json call
-                string contentResponse = MonJeu.Result;
-                Deck pile = JsonConvert.DeserializeObject<Deck>(contentResponse); // convert the pile
-                Console.WriteLine(deck.Cards);
-                foreach (string uneCarte in pile.Cards.Select(Card => Card.Code))
-                {
-                    liste += uneCarte + ','; // add to the list the cards of the current player
-                }
-                url_in_text = "https://deckofcardsapi.com/api/deck/" + deck.ID + "/pile/player" + i + "/add/?cards=" + liste;
-                Console.WriteLine(url_in_text);// add to the pile of the player the card
-                Url = new Uri(url_in_text);
-                Task<string> MonJeu2 = Call.FunctionGet(Url);
-                nbj = nbj - 1; // number of players - 1 , for the next instruction for, for the calcul
-                nbcarddeck = nbcarddeck - cardpl; // update the total number of cards of the deck
+                //Each player reveals a card
+                
+                Card carte = joueur.Cards.Pop();
+                carte.IsReturned = true;
+                Console.WriteLine("Player " + joueur.Num + " played a " + carte.Value + ".");
+                pile.Add(carte);    //Revealed cards are added to a pile
             }
 
+            List<Player> winners = Winners(list, pile);
+            
+            if (winners.Count == 1)
+            {
+                //Case of no battle
+                
+                Console.WriteLine("\nThe winner is the player : " + winners[0].Num + ".\n");
+                GetCardsWin(winners[0].Cards, pile);    //The winner collects the cards played
+                RemovePlayers(list);    //If one of the players has no more cards, he is eliminated
+            }
+            else
+            {
+                //Case of battle
+                
+                Player winner = Battle(winners, list);
+                GetCardsWin(winner.Cards, pile);
+                RemovePlayers(list);
+            }
         }
-
-
-        public static Deck Initialization()
+        public static void GetCardsWin(Stack<Card> playerPile,  List<Card> cardsWon)
         {
-            string Urle = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"; 
-            Uri Url = new Uri(Urle);                                                                          
-            Task<string> MonJeu = Call.FunctionGet(Url);
-            string contentResponse = MonJeu.Result;//This choice is explained in order to be able to have a deck made up of 52 cards that can be displayed
-            Deck deck = JsonConvert.DeserializeObject<Deck>(contentResponse); //Converts the recovered JSON into objects, here a deck with cards
-            return deck; //Return the deck with an ID, the count of remaining, the cards and the deck shuffled
+            Stack<Card> temp = new Stack<Card>();
+            var test = playerPile.Reverse().ToList();
+            playerPile.Clear();
+            cardsWon.ForEach(card => temp.Push(card));   //Put the won cards in a temporary pile, at the bottom of the pile
+            test.ForEach(card => temp.Push(card));   //Put the player cards in a temporary pile, above the cards won
+            temp.Reverse().ToList().ForEach(card => playerPile.Push(card));
+        }
+        public static int[] FindAllIndexof<T>(this IEnumerable<T> values, T val)
+        {
+            //A voir
+            return values.Select((b,i) => object.Equals(b, val) ? i : -1).Where(i => i != -1).ToArray();
         }
 
+        public static List<Player> Winners(List<Player> playersTotal, List<Card> cardsPlayed)
+        {
+            List<int> cardsRanks = new List<int>();
+            
+            //The cards played are matched according to their rank in the tableau
+            foreach (var aCard in cardsPlayed)
+            {
+                if (aCard.IsReturned)
+                {
+                    cardsRanks.Add(Array.FindIndex(cardsValue, card => card == aCard.Value));
+                }
+            }
+            
+            var max = cardsRanks.Max();     //Retrieve the index of the strongest card according to the table
+            var t = cardsRanks.FindAllIndexof(max);     ////Retrieve the index of the players who played the strongest card
+            return t.Select(t1 => playersTotal[t1]).ToList();   //Returns the list of players with the highest card played
+        }
+        public static Player Battle(List<Player> listP, List<Player> playersT)
+        {
+            List<Card> pile = new List<Card>();
+            List<Player> winners = new List<Player>();
 
-        /*   public static void Initialization(int nbpl)
-           {
-               Deck deck = Draw_A_Card(); //Calls the method to implement the deck
-               int[] tab = new int[nbpl - 1];
-               foreach (int joueur in tab)
-               {
-                   //Deck deck = Initialization();
-                   int nbJoueur = nbpl;
-                   int nbrCartesJoueur = deck.Remaining / nbJoueur;
-                   tab[joueur] = nbrCartesJoueur; // on met le nombre de carte du joueur 
-                   nbJoueur = nbJoueur - 1;
-                   //  deck = deck.Remaining - nbrCartesJoueur;
-   
-               }
-               for (int i = 0; i <= nbpl; i++)
-               {
-   
-               }
-   
-           }*/
-
-
+            //Battle is played with the players who have won the round
+            
+            do
+            {
+                List<Card> cardsPlayed = new List<Card>();
+                Console.WriteLine("\n\nStart of the battle");
+                
+                //Checking before the battle that players have enough cards to do it
+                
+                for (int i = 0; i <= 1; i++)
+                {
+                    var playerWithoutCards = listP.Where(p => p.Cards.Count == 0).ToList();
+                    playerWithoutCards.ForEach(p=>
+                    {
+                        listP.Remove(p);
+                        playersT.Remove(p);
+                    });
+                    foreach (var player in listP)
+                    {
+                        //If the players have no more cards, then there is a tie
+                        
+                        if (player.Cards.Count == 0 && playersT.Count == 2)
+                        {
+                            Console.WriteLine("Égalité == PAT ");
+                            Environment.Exit(0);
+                        }
+                        Card carte = player.Cards.Pop();
+                        
+                        //If i = 0 then the card is not turned over, otherwise it is turned over (visible)
+                        
+                        carte.IsReturned = (i != 0);
+                        if (carte.IsReturned)
+                        {
+                            Console.WriteLine("Player " + player.Num + " played a " + carte.Value + ".");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cards are not visible.");
+                        }
+                        cardsPlayed.Add(carte);
+                    }
+                }
+                winners = Winners(listP, cardsPlayed);
+                Console.WriteLine("\nEnd of the battle !\n");
+                cardsPlayed.ForEach(card => pile.Add(card));
+            } while (winners.Count > 1);
+            
+            Console.WriteLine("The winner of the battle is the player " + winners[0].Num + " !\n");
+            GetCardsWin(winners[0].Cards, pile);    //The winner takes the cards
+            return winners[0];
+        }
     }
 }

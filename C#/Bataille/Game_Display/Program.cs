@@ -19,7 +19,7 @@ namespace Game_Display
             Distribution(deck.Cards, listPlayers);
             do
             {
-                Game_ManagerJulien.Manche(listPlayers);
+                Game_Manager.Round(listPlayers);
             } while (listPlayers.Count > 1); //A voir
 
             Console.WriteLine("\n\nThe winner is the player : " + listPlayers[0].Num);
