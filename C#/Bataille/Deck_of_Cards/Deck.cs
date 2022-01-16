@@ -6,7 +6,7 @@ namespace Deck_of_Cards
 {
     public class Deck
     {
-        //Propertie of a deck
+        //Properties of a deck
         
         [JsonProperty("deck_id")]
         public string ID { get; set; }

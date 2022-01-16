@@ -11,27 +11,35 @@ namespace Game_Display
         private static async Task Main()
         {
             Console.WriteLine("Welcome to the game !");
-            List<Player> listPlayers = PlayersList(NumOfPlayers());     //Create a list with players
+            int numOfPlayers = NumOfPlayers();
+            List<Player> listPlayers = PlayersList(numOfPlayers);     //Create a list with players
             Deck deck = await Call.RetrieveOneDeck();   //Create a deck of 52 cards
             
             //Distribute the cards
-            
             Distribution(deck.Cards, listPlayers);
+            
             do
             {
                 Game_Manager.Round(listPlayers);
-            } while (listPlayers.Count > 1); //A voir
+            } while (listPlayers[0].Cards.Count < 52); //The game continues until a player has reached 52 cards.
 
             Console.WriteLine("\n\nThe winner is the player : " + listPlayers[0].Num);
         }
 
         private static int NumOfPlayers()   //Initialize the number of players
         {
-            int nbpl;   //nbpl = Number of players
+            int nbpl = 0;   //nbpl = Number of players
             do
             {
-                Console.WriteLine("Please, enter a number between 2 and 6.");
-                nbpl = int.Parse(Console.ReadLine());
+                try
+                {
+                    Console.WriteLine("Please, enter a number between 2 and 6.");
+                    nbpl = int.Parse(Console.ReadLine() ?? string.Empty);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Retry"); //If the entry is not correct
+                }
             } while (nbpl < 2 || nbpl > 6);     //Minimum 2 players, maximum 6
 
             Console.WriteLine("OK ! The game will be played between " + nbpl + " players.");
@@ -44,9 +52,9 @@ namespace Game_Display
             //Put the players in a list
             
             List<Player> list = new List<Player>();
-            for (int i = 0; i < nbpl; i++)
+            for (int i = 1; i <= nbpl; i++)
             {
-                Player p = new Player(i+1);
+                Player p = new Player(i);
                 list.Add(p);
             }
 
